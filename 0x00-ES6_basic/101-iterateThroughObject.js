@@ -1,8 +1,8 @@
 export default function iterateThroughObject(reportWithIterator) {
-  const string = "";
+  let string = "";
   const iter = reportWithIterator[Symbol.iterator]();
   for (const item in reportWithIterator) {
-    if (iter.next.done !== true) {
+    if (!iter.next.done) {
       string += item +' | ';
     } else {
       string += item;
