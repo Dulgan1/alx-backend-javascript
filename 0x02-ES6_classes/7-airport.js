@@ -1,4 +1,4 @@
-class Airport {
+export default class Airport {
   constructor(name, code) {
     if (typeof name === 'string' && typeof code === 'string') {
       this._name = name;
@@ -33,7 +33,6 @@ class Airport {
   }
 
   toString() {
-    return `${this._code}`;
+    return `[object ${this._code}]`;
   }
 }
-
