@@ -11,4 +11,5 @@ export default function updateStudentGradeByCity(array, city, newGrades) {
       return rElem;
     });
   }
+  return [];
 }
