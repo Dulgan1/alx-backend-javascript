@@ -5,5 +5,5 @@ export default function handleResponseFromAPI(promise) {
       status: 200,
       body: 'success',
     };
-  }, (error) => Error(error));
+  }, (error) => error);
 }
