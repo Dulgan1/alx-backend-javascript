@@ -6,9 +6,12 @@ export default async function handleProfileSignup(firstName, lastName, fileName)
   try {
     const user = await signUpUser(firstName, lastName);
     await uploadPhoto(fileName);
-    response.push({ status: 'fulfilled', value: user, });
+    response.push({ status: 'fulfilled', value: user });
   } catch (error) {
-    response.push({ status: 'rejected', value: `Error: ${fileName} cannot be processed`, });
+    response.push({
+      status: 'rejected',
+      value: `Error: ${fileName} cannot be processed`,
+    });
   }
   return response;
 }
